@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trabajos</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+
+    </head>
+    <body>
+        <h1>Trabajos</h1>    
+        <div>
+            <form action="./" method="POST">
+                <div>
+                    <label for="fecha_de_inicio">Fecha de inicio</label>
+                    <input type="date" id="fecha_de_inicio" name="fecha_de_inicio" tabindex="1" required>
+                </div>
+                <div>
+                    <label for="fecha_de_culminacion">Fecha de culminacion</label>
+                    <input type="date" id="fecha_de_culminacion" name="fecha_de_culminacion" tabindex="2" required>
+                </div>    
+                <div>
+                    <label for="personal_tecnico">ID Personal Tecnico</label>
+                    <input type="text" id="id_pt" name="id_pt" tabindex="3" required>
+                </div>
+                <div>
+                    <label for="reserva">ID Reserva</label>
+                    <input type="text" id="id_reserva" name="id_reserva" tabindex="4" required>
+                </div>         
+                <div>
+                    <label for="equipo">ID Equipo</label>
+                    <input type="text" id="id_equipo" name="id_equipo" tabindex="5" required>
+                </div> 
+                <div>
+                    <label for="trabajo">Trabajo</label>
+                    <input type="text" id="trabajo" name="trabajo" tabindex="6" required>
+                </div>  
+                        
+                <button type="submit" tabindex="7">Guardar</button>
+                <a href="./">Cancelar</a>
+            </form>
+        </div>
+
+    </body>
+</html>

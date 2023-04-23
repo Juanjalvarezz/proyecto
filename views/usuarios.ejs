@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Usuarios</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+    </head>
+   
+    <body>
+        <h1>Usuarios</h1>
+        <table>
+            <tr>
+                <th class="id"><h3>Id</h3></th>
+                <th class="nombre"><h3>Nombre</h3></th>
+                <th class="trabajo" ><h3>Username</h3></th>
+                <th class="trabajo" ><h3>Password</h3></th>
+                <th class="trabajo" ><h3>Rol</h3></th>
+
+            </tr>
+            <% respuesta.forEach(r => { %>
+                <tr>
+                    <td><%= r.id_usuarios%></td>
+                    <td><%= r.nombre_y_apellido%></td>
+                    <td><%= r.username %></td>
+                    <td><%= r.password %></td>
+                    <td><%= r.rol  %></td>
+                </tr>
+            <% }) %>
+        </table>
+   
+    </body>
+</html>

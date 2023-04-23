@@ -1,0 +1,184 @@
+.barra {
+    width: 100%; 
+    background-color: rgb(0, 0, 99); 
+    overflow: auto; 
+    border-radius: 10px;   
+  }
+  
+  .barra a {
+    float: left; 
+    text-align: center; 
+    width: 16.5%;
+    padding: 12px 0; 
+    transition: all 0.3s ease;
+    color: white; 
+    font-size: 56px; 
+    height: 60px;
+    border-radius: 10px;
+  }
+  
+  .barra a:hover {
+    background-color: #000; 
+  }
+  
+  .inf {
+    height: 1.5cm;
+    width: 60px;
+  } 
+
+  .active {
+    background-color: #00004f; 
+  }
+
+  .texto {
+    font-size: 20px;
+  }
+
+  .contenedor {
+    display: flex;
+    justify-content: center;
+  }
+/* ------------------------ LOGIN ----------------------------- */
+
+.formulario {
+    position: inherit;
+    margin-top: 5%;
+     margin-left: 30px;
+     width: 400px;
+     height: 500px;
+     background: white;
+     border-radius: 10px;
+}
+.formulario2 {
+    position: inherit;
+    margin-top: 5%;
+     margin-left: 30px;
+     width: 400px;
+     height: 550px;
+     background: white;
+     border-radius: 10px;
+}
+
+.formulario h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    margin-top: 10%;
+}
+
+.formulario form{
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+box-sizing: border-box;
+padding: 0 40px;
+}
+
+form .username {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+}
+
+.username input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    margin-top: 10%;
+}
+
+.username label {
+    position: absolute;
+    top: 10%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.username span::before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #0262cf;
+    transition: .5s;
+}
+
+.username input:focus ~ label,
+.username input:focus ~ label{
+    top: -5px;
+    color: #0262cf;
+}
+
+.username input:focus ~ span::before,
+.username input:focus ~ span::before{
+    width: 100%;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #0262cf;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+input[type="submit"]:hover{
+    border-color: #034b9e;
+    transition: .5s;
+}
+
+.registrarse {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+} 
+
+.registrarse2 {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    color: black;
+} 
+.registrarse a {
+    color: #0262cf;
+    text-decoration: none;
+}
+
+.registrarse a:hover{
+    text-decoration: underline;
+
+}
+
+body {
+    background-image: url('/image/homepage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+footer {
+    background-color: #0262cf;
+    height: 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: -2%;
+}

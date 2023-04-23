@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reservas</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+
+    </head>
+    <body>
+        <h1>Reservas</h1>    
+        <div>
+            <% if (respuesta) { %>
+            <form action="../" method="Get">
+                <input id="id" name="id" value="<%= respuesta.id_reserva %>" hidden>  
+                
+                <div>
+                    <label for="id">ID Solicitante</label>
+                    <input type="text" name="id_solicitante" tabindex="1" value="<%= respuesta.solicitante %>" required>
+                </div>
+                <div>
+                    <label >Fecha de Inicio</label>
+                    <input type="text" name="fecha_de_inicio" tabindex="2" value="<%= respuesta.fecha_de_inicio.toLocaleDateString() %>"required>
+                </div>         
+                <div>
+                    <label >Fecha de Culminacion</label>
+                    <input type="text" name="fecha_de_culminacion" tabindex="3" value="<%= respuesta.fecha_de_culminacion.toLocaleDateString() %>" required>
+                </div> 
+                <div>
+                    <label >Motivo</label>
+                    <input type="text"  name="motivo" tabindex="4"value="<%= respuesta.motivo %>"  required>
+                </div>  
+                <div>
+                    <label >ID Personal Tecnico</label>
+                    <input type="text"name="id_pt" tabindex="5" value="<%= respuesta.personal_tecnico %>"  required>
+                </div>  
+                <div>
+                    <label >ID Equipo</label>
+                    <input type="text"  name="id_equipo" tabindex="6"value="<%= respuesta.equipo %>"  required>
+                </div>  
+                <div>
+                    <label >ID Espacio</label>
+                    <input type="text" name="id_espacio" tabindex="7"value="<%= respuesta.espacio %>"  required>
+                </div>   
+                        
+                <button type="submit" tabindex="8">Guardar</button>
+                <a href="../">Cancelar</a>
+
+            </form>
+            <% } %>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solicitantes</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/styleinicio.css' />
+
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+    </head>
+   
+    <body>
+        <div class="barra">
+            <a href="/equipos"><img class="inf" src="/image/equipos.png" ></img></a> 
+            <a href="/espacios"><img class="inf" src="/image/espacios.png" ></img></a> 
+            <a href="/personal_tecnico"><img class="inf" src="/image/pt.png" ></img></a> 
+            <a href="/reservas"><img class="inf" src="/image/reserva.png" ></img></a> 
+            <a href="/trabajos"><img class="inf" src="/image/trabajo.png" ></img></a> 
+            <a href="/"><img class="inf" src="/image/salir.png"></img></a>
+        </div>
+
+        <div >
+            <h1>Solicitantes</h1>
+            <a href="/solicitantes/creates"><button style="height: 1.5cm;"><img src="/image/add-to-queue-solid-72.png" alt="Agregar" style="width: 1cm; height: 1cm;"> </button></a>    
+            <table>
+            <thead>
+                <tr>
+                    <th class="id"><h3>Id</h3></th>
+                    <th><h3>Cedula</h3></th>
+                    <th class="nombre"><h3>Nombre y Apellido</h3></th>
+                    <th class="fecha"><h3>Fecha de Nacimiento</h3></th>
+                    <th><h3>Direccion</h3></th>
+                    <th><h3>Usuario</h3></th>
+                    <th><h3>Clave</h3></th>
+                    <th><h3>Telefono</h3></th>
+                    <th><h3>Acciones</h3></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <% respuesta.forEach(r => { %>
+                    <tr>
+                        <td><%= r.id_solicitante  %></td>
+                        <td><%= r.cedula %></td>
+                        <td><%= r.nombre_y_apellido %></td>
+                        <td><%= r.fecha_de_nacimiento.toLocaleDateString() %></td>
+                        <td><%= r.direccion  %></td>
+                        <td><%= r.usuario  %></td>
+                        <td><%= r.clave  %></td>
+                        <td><%= r.telefono  %></td>
+                        <td>
+                            <a href="/solicitantes/edits/<%= r.id_solicitante %>"><button style="height: 1.3cm;"><img src="/image/edit-alt-solid-24.png" alt="Agregar" style="width: 1cm; height: 1cm;"> </button></a>    
+                            <a href="/solicitantes/erases/<%= r.id_solicitante %>"><button style="height: 1.3cm;"><img src="/image/eraser-solid-72.png" alt="Delete" style="width: 1cm; height: 1cm;"> </button></a>    
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>

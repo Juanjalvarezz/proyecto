@@ -1,0 +1,79 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+table, th, td {
+  text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 0%; 
+}
+.id{
+  width: 2cm;
+}
+.fecha{
+  width: 3cm;
+}
+.pt{
+  width: 5cm;
+}
+.reserva{
+  width: 5cm;
+}
+.equipo{
+  width: 5cm;
+}
+.trabajo{
+  width: 5cm;
+}
+.serial{
+  width: 2cm;
+}
+.nombre{
+  width: 4cm;
+}
+.descripcion{
+  width: 7cm;
+}
+.estatus{
+  width: 4cm;
+}
+.logo{
+ width: 4cm;
+}
+
+.back {
+  background-image: url('/image/homepage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.box {
+  position: inherit;
+  padding: 0.5cm;
+  margin-top: 5%;
+   margin-left: 30px;
+   width: 90%;
+   height: 520px;
+   background-color: rgba(255, 255, 255, 0.5);
+   border-radius: 10px;
+}
+
+button[type="submit"]{
+  width: 20%;
+  height: 50px;
+  background: rgb(0, 0, 99);
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}

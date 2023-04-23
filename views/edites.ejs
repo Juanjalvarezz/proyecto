@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Espacios</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+
+    </head>
+    <body>
+        <h1>Espacios</h1>    
+        <div>
+            <% if (respuesta) { %>
+            <form action="../<%= respuesta.id_espacio %>" method="POST">
+                    <input id="id" name="id" value="<%= respuesta.id_espacio %>" hidden>  
+                
+                    <div>
+                        <label for="id">Nombre</label>
+                        <input type="text" name="nombre" tabindex="1" value="<%= respuesta.nombre %>" required>
+                    </div>
+                    <div>
+                        <label >Descripcion</label>
+                        <input type="text" name="descripcion" tabindex="2"value="<%= respuesta.descripcion %>" required>
+                    </div>         
+                    <div>
+                        <label >Direccion</label>
+                        <input type="text" name="direccion" tabindex="3"value="<%= respuesta.direccion %>" required>
+                    </div> 
+                    <div>
+                        <label >Estatus</label>
+                        <input type="text"  name="estatus" tabindex="4"value="<%= respuesta.estatus %>" required>
+                    </div>  
+                        
+                <button type="submit" tabindex="5">Guardar</button>
+                <a href="../">Cancelar</a>
+
+            </form>
+            <% } %>
+        </div>
+    </body>
+</html>

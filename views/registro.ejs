@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/stylesheets/styleinicio.css">
+    <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+</head>
+<body>
+   
+    <div class="contenedor">
+    <div class="formulario formulario2" >
+            <h1>Registrate con nosotros!</h1>
+            <form method="post" action="/usuarios/registro">
+                <div class="username">
+                    <input type="text" required name="nombre_y_apellido">
+                    <label>Nombre y apellido</label>
+                </div>
+                <div class="username">
+                    <input type="text" required name="username">
+                    <label>Nombre de usuario</label>
+                </div>
+                <div class="username">
+                    <input type="password" required name="password">
+                    <label>Contraseña</label>
+                </div>
+                <input type="submit" value="Registrarse">
+
+            <div class="registrarse">
+                    Regresar al inicio? <a href="http://localhost:3000/" >Regresar</a>
+                </div>
+            </form> 
+        </div>
+        
+</body>
+</html>

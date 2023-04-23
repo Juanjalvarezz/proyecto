@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reservas</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/styleinicio.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+    </head>
+   
+    <body>
+        <div class="barra">
+            <a href="/equipos"><img class="inf" src="/image/equipos.png" ></img></a> 
+            <a href="/espacios"><img class="inf" src="/image/espacios.png" ></img></a> 
+            <a href="/personal_tecnico"><img class="inf" src="/image/pt.png" ></img></a> 
+            <a href="/solicitantes"><img class="inf" src="/image/solicitante.png" ></img></a> 
+            <a href="/trabajos"><img class="inf" src="/image/trabajo.png" ></img></a> 
+            <a href="/"><img class="inf" src="/image/salir.png"></img></a>
+        </div>
+        <div style="margin-left: 2cm;">
+            <h1>Reservas</h1>
+            <a href="/reservas/creater"><button style="height: 1.5cm;"><img src="/image/add-to-queue-solid-72.png" alt="Agregar" style="width: 1cm; height: 1cm;"> </button></a>    
+            <table>
+            <thead>
+                <tr>
+                    <th><h3>Id Reserva</h3></th>
+                    <th><h3>Id Solicitante</h3></th>
+                    <th class="fecha"><h3>Fecha de Inicio</h3></th>
+                    <th class="fecha"><h3>Fecha de Culminacion</h3></th>
+                    <th><h3>Motivo</h3></th>
+                    <th><h3>Id Personal Tecnico</h3></th>
+                    <th><h3>Id Equipo</h3></th>
+                    <th><h3>Id Espacio</h3></th>
+                    <th><h3>Acciones</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% respuesta.forEach(r => { %>
+                    <tr>
+                        <td><%= r.id_reserva  %></td>
+                        <td><%= r.solicitante %></td>
+                        <td><%= r.fecha_de_inicio.toLocaleDateString() %></td>
+                        <td><%= r.fecha_de_culminacion.toLocaleDateString() %></td>
+                        <td><%= r.motivo  %></td>
+                        <td><%= r.personal_tecnico  %></td>
+                        <td><%= r.equipo  %></td>
+                        <td><%= r.espacio  %></td>
+                        <td>
+                            <a href="/reservas/editr/<%= r.id_reserva %>"><button style="height: 1.3cm;"><img src="/image/edit-alt-solid-24.png" alt="Agregar" style="width: 1cm; height: 1cm;"> </button></a>    
+                            <a href="/reservas/eraser/<%= r.id_reserva %>"><button style="height: 1.3cm;"><img src="/image/eraser-solid-72.png" alt="Delete" style="width: 1cm; height: 1cm;"> </button></a>    
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+            </table>
+        </div>
+    </body>
+</html>

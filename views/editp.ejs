@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+
+    </head>
+    <body>
+        <h1>Personal</h1>    
+        <div>
+            <% if (respuesta) { %>
+            <form action="../" method="Get">
+                <input id="id" name="id" value="<%= respuesta.id_pt %>" hidden>  
+                
+                <div>
+                    <label for="id">Cedula</label>
+                    <input type="text" name="cedula" tabindex="1"value="<%= respuesta.cedula %>" required>
+                </div>
+                <div>
+                    <label >Nombre y Apellido</label>
+                    <input type="text" name="nombre_y_apellido" tabindex="2"value="<%= respuesta.nombre_y_apellido %>" required>
+                </div>         
+                <div>
+                    <label >Cargo</label>
+                    <input type="text" name="cargo" tabindex="3"value="<%= respuesta.cargo %>" required>
+                </div> 
+                <div>
+                    <label >Usuario</label>
+                    <input type="text"  name="usuario" tabindex="4" value="<%= respuesta.usuario %>" required>
+                </div>  
+                <div>
+                    <label >Clave</label>
+                    <input type="text"name="clave" tabindex="5" value="<%= respuesta.clave%>" required>
+                </div>  
+                <div>
+                    <label >Especialidad</label>
+                    <input type="text"  name="especialidad" tabindex="6"value="<%= respuesta.especialidad %>" required>
+                </div>  
+                        
+                <button type="submit" tabindex="8">Guardar</button>
+                <a href="../">Cancelar</a>
+
+            </form>
+            <% } %>
+        </div>
+    </body>
+</html>

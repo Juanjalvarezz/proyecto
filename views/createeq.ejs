@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Equipos</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+
+    </head>
+    <body>
+        <h1>Equipos</h1>    
+        <div>
+            <form action="./" method="POST">   
+                <div>
+                    <label for="id">Serial</label>
+                    <input type="text" name="serial" tabindex="1" required>
+                </div> 
+                <div>
+                    <label for="id">Nombre</label>
+                    <input type="text" name="nombre" tabindex="2" required>
+                </div>
+                <div>
+                    <label >Descripcion</label>
+                    <input type="text" name="descripcion" tabindex="3" required>
+                </div>         
+                <div>
+                    <label >Fecha de Adquisicion</label>
+                    <input type="date" name="fecha_de_adquisicion" tabindex="4" required>
+                </div> 
+                <div>
+                    <label >Estatus</label>
+                    <input type="text"  name="estatus" tabindex="5" required>
+                </div>  
+                
+                
+                <button type="submit" tabindex="6">Guardar</button>
+                <a href="./">Cancelar</a>
+            </form>
+        </div>
+
+    </body>
+</html>

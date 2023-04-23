@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Administradores</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/styleinicio.css' />
+
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+    </head>
+    <body>
+
+        <div class="barra">
+            <a href="/equipos_necesarios"><img class="inf" src="/image/equipos.png" ></img></a> 
+            <a href="/trabajadores"><img class="inf" src="/image/pt.png" ></img></a> 
+        </div>
+        <div style="margin-left: 3cm;">
+        <h1>Administradores</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="id"><h3>Id</h3></th>
+                    <th class="nombre"><h3>Nombre</h3></th>
+                    <th class="descripcion"><h3>Edad</h3></th>
+                    <th class="fecha"><h3>Cargo</h3></th>
+    
+                </tr>
+            </thead>
+            <tbody>
+                <% respuesta.forEach(r => { %>
+                    <tr>
+                        <td><%=r.id_admin  %></td>
+                        <td><%= r.nombre  %></td>
+                        <td><%= r.edad  %></td>
+                        <td><%= r.cargo  %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        </div>
+    </body>
+</html>

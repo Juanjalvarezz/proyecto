@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trabajos</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+
+    </head>
+    <body>
+        <h1>Trabajos</h1>    
+        <div>
+            <% if (respuesta) { %>
+            <form action="../<%= respuesta.id_solicitante %>" method="POST">
+                <input id="id" name="id" value="<%= respuesta.id_solicitante %>" hidden>  
+                
+                <div>
+                    <label for="cedula">Cedula</label>
+                    <input type="text" id="cedula" name="cedula" tabindex="1"  value="<%= respuesta.cedula %>"  required>
+                </div>
+                <div>
+                    <label for="nombre_y_apellido">Nombre y Apellido</label>
+                    <input type="text" id="nombre_y_apellido" name="nombre_y_apellido" tabindex="2"  value="<%= respuesta.nombre_y_apellido  %>"  required>
+                </div>         
+                <div>
+                    <label for="fecha_de_nacimiento">Fecha de Nacimiento</label>
+                    <input type="text" id="fecha_de_nacimiento" name="fecha_de_nacimiento" tabindex="3"  value="<%= respuesta.fecha_de_nacimiento.toLocaleDateString() %>"  required>
+                </div> 
+                <div>
+                    <label for="direccion">Direccion</label>
+                    <input type="text" id="direccion" name="direccion" tabindex="4"  value="<%= respuesta.direccion  %>"  required>
+                </div>  
+                <div>
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" tabindex="5"  value="<%= respuesta.usuario  %>"  required>
+                </div>  
+                <div>
+                    <label for="clave">Clave</label>
+                    <input type="text" id="clave" name="clave" tabindex="6"  value="<%= respuesta.clave  %>" required>
+                </div>  
+                <div>
+                    <label for="telefono">Telefono</label>
+                    <input type="text" id="telefono" name="telefono" tabindex="7"  value="<%= respuesta.telefono %>"  required>
+                </div>  
+                        
+                <button type="submit" tabindex="8">Guardar</button>
+                <a href="../">Cancelar</a>
+
+            </form>
+            <% } %>
+        </div>
+    </body>
+</html>
